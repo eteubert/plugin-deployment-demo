@@ -10,4 +10,4 @@
  * License URI: license.txt
  */
  
- error_log(print_r("I am alive!", true));
+ error_log(print_r("I am alive and in development!", true));
