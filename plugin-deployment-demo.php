@@ -10,4 +10,5 @@
  * License URI: license.txt
  */
  
- error_log(print_r("I am alive and in development!", true));
+ // let's try to uncomment this, which should... ah I have no idea, let's try!
+ // error_log(print_r("I am alive and in development!", true));
