@@ -1,6 +1,7 @@
 echo "Starting Build"
 echo "Tag: $TRAVIS_TAG"
-echo "Branch: $TRAVIS_BRANCH / `git rev-parse --abbrev-ref HEAD`"
+BRANCH_FOR_TAG=`git branch --contains $TRAVIS_TAG | grep -v "HEAD detached" | head -n 1 | xargs`
+echo "Branch: $TRAVIS_BRANCH / $BRANCH_FOR_TAG"
 make build
 # add build number to version
 sed -i.bak "s/\(Version:.*\)/\1.build$TRAVIS_BUILD_NUMBER/" dist/plugin-deployment-demo.php
