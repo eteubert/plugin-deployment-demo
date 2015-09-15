@@ -1,4 +1,6 @@
-echo "Starting Build $TRAVIS_TAG"
+echo "Starting Build"
+echo "Tag: $TRAVIS_TAG"
+echo "Branch: $TRAVIS_BRANCH"
 make build
 # add build number to version
 sed -i.bak "s/\(Version:.*\)/\1.build$TRAVIS_BUILD_NUMBER/" dist/plugin-deployment-demo.php
