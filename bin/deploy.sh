@@ -1,6 +1,6 @@
 echo "Starting Build"
 echo "Tag: $TRAVIS_TAG"
-BRANCH_FOR_TAG=`git branch --contains $TRAVIS_TAG | grep -v "HEAD detached" | head -n 1 | xargs`
+BRANCH_FOR_TAG=`git branch --contains $TRAVIS_TAG | grep -v "detached" | head -n 1 | xargs`
 echo "Branch: $TRAVIS_BRANCH / $BRANCH_FOR_TAG"
 make build
 # add build number to version

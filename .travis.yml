@@ -3,7 +3,7 @@ language: php
 php:
   - 5.4
 
-script:
+install:
   - git clone https://github.com/eteubert/plugin-deployment-demo.git eteubert/plugin-deployment-demo
   - cd eteubert/plugin-deployment-demo
   - git checkout -qf $TRAVIS_COMMIT
